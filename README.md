@@ -2,7 +2,7 @@
 
 Link to Kaggle challenge: https://www.kaggle.com/c/prudential-life-insurance-assessment/overview
 
-**Overview**
+**Overview**  
 Picture this. You are a data scientist in a start-up culture with the potential to have a very large impact on the business. Oh, and you are backed up by a company with 140 years' business experience.
 
 Curious? Great! You are the kind of person we are looking for.
