@@ -1,4 +1,4 @@
-# Prudential Life Insurance Assessment (Kaggle Competition)
+# Prudential Life Insurance Assessment (Kaggle Competition) [COMING SOON]
 
 Link to Kaggle challenge: https://www.kaggle.com/c/prudential-life-insurance-assessment/overview
 
