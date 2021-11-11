@@ -1,4 +1,4 @@
-# Prudential Life Insurance Assessment (Kaggle Competition) [COMING SOON]
+# AutoML with H2O, MLflow and FastAPI for Life Insurance Assessment
 
 Link to Kaggle challenge: https://www.kaggle.com/c/prudential-life-insurance-assessment/overview
 
