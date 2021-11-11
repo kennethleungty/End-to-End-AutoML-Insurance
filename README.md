@@ -1,7 +1,5 @@
 # AutoML for Life Insurance Assessment with H2O, MLflow, and FastAPI 
 
-Link to Kaggle challenge: https://www.kaggle.com/c/prudential-life-insurance-assessment/overview
-
 **Overview**  
 Prudential, one of the largest issuers of life insurance in the USA, is hiring passionate data scientists to join a newly-formed Data Science group solving complex challenges and identifying opportunities.
 
@@ -12,3 +10,5 @@ The result? People are turned off. That’s why only 40% of U.S. households own 
 By developing a predictive model that accurately classifies risk using a more automated approach, you can greatly impact public perception of the industry.
 
 The results will help Prudential better understand the predictive power of the data points in the existing assessment, enabling us to significantly streamline the process.
+
+Link to Kaggle challenge: https://www.kaggle.com/c/prudential-life-insurance-assessment/overview
