@@ -1,0 +1,12 @@
+streamlit
+mlflow
+h2o
+numpy
+pandas
+matplotlib
+fastapi[all]
+uvicorn
+scikit-learn
+requests
+tabulate
+future
