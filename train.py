@@ -10,6 +10,8 @@ import mlflow
 import mlflow.h2o
 from mlflow.tracking import MlflowClient
 
+import json
+
 def parse_args():
     parser = argparse.ArgumentParser(description="H2O AutoML Train and MLflow Track")
 
@@ -71,6 +73,10 @@ def main():
 
     # Import data directly as H2O frame (default location is data/processed)
     main_frame = h2o.import_file(path='data/processed/train.csv')
+
+    # Save column data types of H2O frame (for matching with test set during prediction)
+    with open('data/processed/train_col_types.json', 'w') as fp:
+        json.dump(main_frame.types, fp)
 
     # Set predictor and target columns
     target = args.target
