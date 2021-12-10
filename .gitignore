@@ -2,7 +2,7 @@
 mlruns/
 
 # Virtual environment
-e2e-automl/
+env_automl/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
