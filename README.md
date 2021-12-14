@@ -2,22 +2,26 @@
 
 Link to writeup: *Coming Soon*
 
-### Context
+## Context
 - Traditional machine learning (ML) model development is time-consuming, resource-intensive, and requires a high degree of technical expertise along with many lines of code. 
 - This model development process has been simplified and accelerated with the advent of automated machine learning (AutoML), allowing data teams to generate performant and scalable models quickly and efficiently.
 - An important thing to remember is that there are multiple components in production-ready ML systems beyond model development.
 - In this project, we explore how to set up, train, and serve an ML system using the powerful capabilities of H2O AutoML, MLflow, FastAPI, and Streamlit for life insurance risk assessment.
 
-### Objective
+
+___
+## Objective
 - Build a predictive ML pipeline (on Prudential Life Insurance data) to automatically classify customer risk so that insurers can make the application process more streamlined.
 
-### Pipeline Components
+___
+## Pipeline Components
 - Data Acquisition and Preprocessing
 - H2O AutoML training with MLflow tracking
 - Deployment of best H2O model via FastAPI
 - Streamlit user interface to post test data to FastAPI endpoint
 
-### Project Files and Folders
+___
+## Project Files and Folders
 - `/data` - Folder containing the raw data, processed data and output data (predictions JSON file)
 - `/demo` - Folder containing the gif and webm of Streamlit UI demo
 - `/submissions` - Folder containing the CSV files for Kaggle submission to retrieve model accuracy scores
@@ -29,8 +33,8 @@ Link to writeup: *Coming Soon*
 - `train.py` - Python script for the execution of H2O AutoML training with MLflow tracking
 - `ui.py` - Python script for the Streamlit web app, connected with FastAPI endpoint for model inference
 
-
-### References
+___
+## References
 - https://docs.h2o.ai/h2o/latest-stable/h2o-docs/automl.html
 - https://www.mlflow.org/docs/latest/python_api/mlflow.h2o.html
 - https://setscholars.net/automl-h2o-project-a-guide-to-build-a-multi-class-classification-model-in-python-using-car-description-data/
