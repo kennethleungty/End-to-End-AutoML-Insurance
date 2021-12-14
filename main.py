@@ -27,17 +27,14 @@ app = FastAPI()
 h2o.init()
 client = MlflowClient()
 
-# Get best model amongst all runs in all experiments
+# Load best model (based on logloss) amongst all runs in all experiments
 all_exps = [exp.experiment_id for exp in client.list_experiments()]
 runs = mlflow.search_runs(experiment_ids=all_exps, run_view_type=ViewType.ALL)
 run_id, exp_id = runs.loc[runs['metrics.log_loss'].idxmin()]['run_id'], runs.loc[runs['metrics.log_loss'].idxmin()]['experiment_id']
-
-# Load best model (AutoML leader)
 best_model = mlflow.h2o.load_model(f"mlruns/{exp_id}/{run_id}/artifacts/model/")
 
 # Create POST endpoint with path '/predict'
 @app.post("/predict")
-# async def predict(file: UploadFile = File(...)):
 async def predict(file: bytes = File(...)):
     print('[+] Initiate Prediction')
     file_obj = io.BytesIO(file)

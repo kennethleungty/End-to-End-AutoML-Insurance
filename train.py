@@ -67,7 +67,6 @@ def main():
     print(f"Name: {experiment_name}")
     print(f"Experiment_id: {experiment.experiment_id}")
     print(f"Artifact Location: {experiment.artifact_location}")
-    print(f"Tags: {experiment.tags}")
     print(f"Lifecycle_stage: {experiment.lifecycle_stage}")
     print(f"Tracking uri: {mlflow.get_tracking_uri()}")
 
@@ -85,7 +84,7 @@ def main():
     # Factorize target variable so that autoML tackles classification problem
     main_frame[target] = main_frame[target].asfactor()
 
-    # Wrap autoML training with MLflow
+    # Setup and wrap AutoML training with MLflow
     with mlflow.start_run():
         aml = H2OAutoML(
                         max_models=args.models, # Run AutoML for n base models
@@ -96,6 +95,7 @@ def main():
                         exclude_algos = ['GLM', 'DRF'], # Specify algorithms to exclude
                     )
         
+        # Initiate AutoML training
         aml.train(x=predictors, y=target, training_frame=main_frame)
         
         # Set metrics to log
@@ -103,10 +103,7 @@ def main():
         mlflow.log_metric("mean_per_class_error", aml.leader.mean_per_class_error())
         
         # Log and save best model (mlflow.h2o provides API for logging & loading H2O models)
-        mlflow.h2o.log_model(aml.leader, 
-                             artifact_path="model",
-    #                          registered_model_name=''
-                            )
+        mlflow.h2o.log_model(aml.leader, artifact_path="model")
         
         model_uri = mlflow.get_artifact_uri("model")
         print(f'AutoML best model saved in {model_uri}')
