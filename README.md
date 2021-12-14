@@ -11,6 +11,12 @@ Link to writeup: *Coming Soon*
 **Objective**
 - Build a predictive ML pipeline (on Prudential Life Insurance data) to automatically classify customer risk so that insurers can make the application process more streamlined.
 
+**Pipeline Components**
+- Data Acquisition and Preprocessing
+- H2O AutoML training with MLflow tracking
+- Deployment of best H2O model via FastAPI
+- Streamlit user interface to post test data to FastAPI endpoint
+
 **Project Files and Folders**
 - 
 
