@@ -21,6 +21,11 @@ ___
 - Streamlit user interface to post test data to FastAPI endpoint
 
 ___
+## UI Demo
+
+![alt text](https://github.com/kennethleungty/End-to-End-AutoML-Insurance/blob/main/demo/streamlit-ui-2021-12-15-00-12-47.gif?raw=true)
+
+___
 ## Project Files and Folders
 - `/data` - Folder containing the raw data, processed data and output data (predictions JSON file)
 - `/demo` - Folder containing the gif and webm of Streamlit UI demo
