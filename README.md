@@ -25,3 +25,4 @@ Link to writeup: *Coming Soon*
 - https://testdriven.io/blog/fastapi-streamlit/
 - https://rihab-feki.medium.com/deploying-machine-learning-models-with-streamlit-fastapi-and-docker-bb16bbf8eb91
 - https://www.kaggle.com/c/prudential-life-insurance-assessment/overview
+- https://davidefiocco.github.io/streamlit-fastapi-ml-serving/
