@@ -4,6 +4,9 @@ mlruns/
 # Virtual environment
 env_automl/
 
+# Data folders
+data/processed/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
