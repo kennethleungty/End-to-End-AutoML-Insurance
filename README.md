@@ -1,4 +1,4 @@
-# End-to-End AutoML with H2O, MLflow, FastAPI, and Streamlit for Life Insurance Risk Assessment 
+# End-to-End AutoML with H2O, MLflow, FastAPI, and Streamlit for Insurance Cross-Sell
 
 Link to writeup: *Coming Soon*
 
@@ -6,12 +6,11 @@ Link to writeup: *Coming Soon*
 - Traditional machine learning (ML) model development is time-consuming, resource-intensive, and requires a high degree of technical expertise along with many lines of code. 
 - This model development process has been simplified and accelerated with the advent of automated machine learning (AutoML), allowing data teams to generate performant and scalable models quickly and efficiently.
 - An important thing to remember is that there are multiple components in production-ready ML systems beyond model development.
-- In this project, we explore how to set up, train, and serve an ML system using the powerful capabilities of H2O AutoML, MLflow, FastAPI, and Streamlit for life insurance risk assessment.
-
+- In this project, we explore how to set up, train, and serve an ML system using the powerful capabilities of H2O AutoML, MLflow, FastAPI, and Streamlit for insurance cross-sell prediction
 
 ___
 ## Objective
-- Build a predictive ML pipeline (on Prudential Life Insurance data) to automatically classify customer risk so that insurers can make the application process more streamlined.
+- Build a ML pipeline (on Prudential Life Insurance data) to automatically classify the interest of health insurance customers in purchasing additional vehicle insurance policy risk.
 
 ___
 ## Pipeline Components
