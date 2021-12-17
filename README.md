@@ -21,6 +21,11 @@ ___
 - Streamlit user interface to post test data to FastAPI endpoint
 
 ___
+## UI Demo
+
+![alt text](https://github.com/kennethleungty/End-to-End-AutoML-Insurance/blob/main/demo/streamlit-ui-2021-12-15-00-12-47.gif?raw=true)
+
+___
 ## Project Files and Folders
 - `/data` - Folder containing the raw data, processed data and output data (predictions JSON file)
 - `/demo` - Folder containing the gif and webm of Streamlit UI demo
@@ -38,10 +43,8 @@ ___
 - https://docs.h2o.ai/h2o/latest-stable/h2o-docs/automl.html
 - https://www.mlflow.org/docs/latest/python_api/mlflow.h2o.html
 - https://setscholars.net/automl-h2o-project-a-guide-to-build-a-multi-class-classification-model-in-python-using-car-description-data/
-- https://www.mlflow.org/docs/latest/models.html#h2o-h2o
 - https://fastapi.tiangolo.com/tutorial/request-files/
 - https://medium.com/analytics-vidhya/fundamentals-of-mlops-part-4-tracking-with-mlflow-deployment-with-fastapi-61614115436
 - https://testdriven.io/blog/fastapi-streamlit/
 - https://rihab-feki.medium.com/deploying-machine-learning-models-with-streamlit-fastapi-and-docker-bb16bbf8eb91
-- https://www.kaggle.com/c/prudential-life-insurance-assessment/overview
 - https://davidefiocco.github.io/streamlit-fastapi-ml-serving/
