@@ -10,7 +10,7 @@ Link to writeup: *Coming Soon*
 
 ___
 ## Objective
-- Build a ML pipeline (on Prudential Life Insurance data) to automatically classify the interest of health insurance customers in purchasing additional vehicle insurance policy risk.
+- Build a ML pipeline (on Health Insurance data) to automatically classify the interest of health insurance customers in purchasing additional vehicle insurance coverage.
 
 ___
 ## Pipeline Components
