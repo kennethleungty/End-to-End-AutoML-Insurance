@@ -34,7 +34,7 @@ ___
 - `02_XGBoost_Baseline_Model.ipynb` - Notebook running the XGBoost baseline model for subsequent comparison
 - `03_H2O_AutoML_with_MLflow.ipynb` - Notebook showing the full H2O AutoML training and MLflow tracking process, along with model inference to get predictions
 - `main.py` - Python script for selecting best H2O model and deploying it as FastAPI endpoint
-- `train.py` - Python script for the execution of H2O AutoML training with MLflow tracking
+- `train.py` - Python script for the execution of H2O AutoML training with MLflow tracking. E.g. Run in CLI with `python train.py --target 'Response'`
 - `ui.py` - Python script for the Streamlit web app, connected with FastAPI endpoint for model inference
 
 ___
