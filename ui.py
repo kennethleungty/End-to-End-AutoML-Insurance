@@ -10,7 +10,7 @@ import pandas as pd
 import io
 import json
 
-st.title('End-to-End AutoML Project: Life Insurance Assessment')
+st.title('End-to-End AutoML Project: Insurance Cross-Sell')
 
 # Set FastAPI endpoint
 endpoint = 'http://localhost:8000/predict'
@@ -21,7 +21,7 @@ test_csv = st.file_uploader('', type=['csv','xlsx'], accept_multiple_files=False
 # Upon upload of file
 if test_csv:
     test_df = pd.read_csv(test_csv)
-    st.subheader('View Sample of Test Set')
+    st.subheader('Sample of Uploaded Dataset')
     st.write(test_df.head())
 
     # Convert dataframe to BytesIO object (for parsing as file into FastAPI later)
@@ -40,9 +40,7 @@ if test_csv:
                 output = requests.post(endpoint, 
                                        files=files,
                                        timeout=8000)
-                import time
-                time.sleep(5)
-            st.success('Success! Click the Download button below to retrieve prediction results (JSON format)')
+            st.success('Success! Click Download button below to get prediction results (in JSON format)')
             st.download_button(
                 label='Download',
                 data=json.dumps(output.json()), # Download as JSON file object

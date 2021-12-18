@@ -13,13 +13,13 @@ from mlflow.tracking import MlflowClient
 import json
 
 def parse_args():
-    parser = argparse.ArgumentParser(description="H2O AutoML Train and MLflow Track")
+    parser = argparse.ArgumentParser(description="H2O AutoML Training and MLflow Tracking")
 
     parser.add_argument('--name', '--experiment_name',
                          metavar='', 
                         #  required=True,
-                         default='insurance-automl',
-                         help='Name of Experiment. Default is insurance-automl', 
+                         default='automl-insurance',
+                         help='Name of Experiment. Default is automl-insurance', 
                          type=str
                         )
 
@@ -100,7 +100,7 @@ def main():
         
         # Set metrics to log
         mlflow.log_metric("log_loss", aml.leader.logloss())
-        mlflow.log_metric("mean_per_class_error", aml.leader.mean_per_class_error())
+        mlflow.log_metric("AUC", aml.leader.auc())
         
         # Log and save best model (mlflow.h2o provides API for logging & loading H2O models)
         mlflow.h2o.log_model(aml.leader, artifact_path="model")

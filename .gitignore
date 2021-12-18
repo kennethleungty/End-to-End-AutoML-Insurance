@@ -1,6 +1,3 @@
-#MLflow runs
-mlruns/
-
 # Virtual environment
 env_automl/
 

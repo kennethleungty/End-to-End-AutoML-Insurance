@@ -31,6 +31,7 @@ client = MlflowClient()
 all_exps = [exp.experiment_id for exp in client.list_experiments()]
 runs = mlflow.search_runs(experiment_ids=all_exps, run_view_type=ViewType.ALL)
 run_id, exp_id = runs.loc[runs['metrics.log_loss'].idxmin()]['run_id'], runs.loc[runs['metrics.log_loss'].idxmin()]['experiment_id']
+print(f'Loading best model: Run {run_id} of Experiment {exp_id}')
 best_model = mlflow.h2o.load_model(f"mlruns/{exp_id}/{run_id}/artifacts/model/")
 
 # Create POST endpoint with path '/predict'
