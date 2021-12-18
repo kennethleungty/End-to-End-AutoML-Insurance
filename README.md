@@ -21,7 +21,6 @@ ___
 
 ___
 ## UI Demo
-
 ![alt text](https://github.com/kennethleungty/End-to-End-AutoML-Insurance/blob/main/demo/streamlit-ui-2021-12-15-00-12-47.gif?raw=true)
 
 ___
@@ -33,9 +32,9 @@ ___
 - `01_EDA_and_Data_PreProcessing.ipynb` - Notebook detailing the data acquisition, data cleaning and feature engineering steps
 - `02_XGBoost_Baseline_Model.ipynb` - Notebook running the XGBoost baseline model for subsequent comparison
 - `03_H2O_AutoML_with_MLflow.ipynb` - Notebook showing the full H2O AutoML training and MLflow tracking process, along with model inference to get predictions
-- `main.py` - Python script for selecting best H2O model and deploying it as FastAPI endpoint
 - `train.py` - Python script for the execution of H2O AutoML training with MLflow tracking. E.g. Run in CLI with `python train.py --target 'Response'`
-- `ui.py` - Python script for the Streamlit web app, connected with FastAPI endpoint for model inference
+- `main.py` - Python script for selecting best H2O model and deploying (and serving) it as FastAPI endpoint. E.g. Run in CLI with `python main.py'`
+- `ui.py` - Python script for the Streamlit web app, connected with FastAPI endpoint for model inference. E.g. Run in CLI with `python ui.py'`
 
 ___
 ## References
