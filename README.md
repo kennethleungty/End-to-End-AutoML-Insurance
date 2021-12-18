@@ -2,7 +2,13 @@
 
 Link to writeup: *Coming Soon*
 
-## Context
+## Overview - Business Aspect
+- Cross-selling in insurance is the act of promoting products that are related to or complementary to the policies that existing customers already own or use.
+- The goal of cross-selling is to create a win-win situation where customers can obtain comprehensive protection at a lower bundled cost, while insurers can boost their revenue through enhanced policy conversions.
+- The aim of this project is to build a predictive ML pipeline (on the Health Insurance Cross-Sell dataset) to identify health insurance customers who are interested in purchasing additional vehicle insurance, in a bid to make cross-sell campaigns more efficient and targeted.
+
+
+## Overview - Technical Aspect
 - Traditional machine learning (ML) model development is time-consuming, resource-intensive, and requires a high degree of technical expertise along with many lines of code. 
 - This model development process has been simplified and accelerated with the advent of automated machine learning (AutoML), allowing data teams to generate performant and scalable models quickly and efficiently.
 - An important thing to remember is that there are multiple components in production-ready ML systems beyond model development.
@@ -21,7 +27,7 @@ ___
 
 ___
 ## UI Demo
-![alt text](https://github.com/kennethleungty/End-to-End-AutoML-Insurance/blob/main/demo/streamlit-ui-2021-12-15-00-12-47.gif?raw=true)
+![alt text](https://github.com/kennethleungty/End-to-End-AutoML-Insurance/blob/main/demo/streamlit-ui-2021-12-18-17-12-25.gif?raw=true)
 
 ___
 ## Project Files and Folders
