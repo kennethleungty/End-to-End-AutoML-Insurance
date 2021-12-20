@@ -1,6 +1,6 @@
 # End-to-End AutoML with H2O, MLflow, FastAPI, and Streamlit for Insurance Cross-Sell
 
-Link to writeup: https://towardsdatascience.com/end-to-end-automl-train-and-serve-with-h2o-mlflow-fastapi-and-streamlit-5d36eedfe606#d970-7de12f063687
+Link to writeup: https://towardsdatascience.com/end-to-end-automl-train-and-serve-with-h2o-mlflow-fastapi-and-streamlit-5d36eedfe606
 
 ## Overview - Business Aspect
 - Cross-selling in insurance is the practice of promoting products that are complementary to the policies that existing customers already own.
