@@ -37,6 +37,8 @@ if test_csv:
             st.write("Please upload a valid test dataset!")  # handle case with no image
         else:
             with st.spinner('Prediction in Progress. Please Wait...'):
+                # import time
+                # time.sleep(3)
                 output = requests.post(endpoint, 
                                        files=files,
                                        timeout=8000)
