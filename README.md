@@ -1,22 +1,22 @@
 # End-to-End AutoML with H2O, MLflow, FastAPI, and Streamlit for Insurance Cross-Sell
 
-Link to writeup: *Coming Soon*
+Link to writeup: https://towardsdatascience.com/end-to-end-automl-train-and-serve-with-h2o-mlflow-fastapi-and-streamlit-5d36eedfe606
 
 ## Overview - Business Aspect
-- Cross-selling in insurance is the act of promoting products that are related to or complementary to the policies that existing customers already own or use.
-- The goal of cross-selling is to create a win-win situation where customers can obtain comprehensive protection at a lower bundled cost, while insurers can boost their revenue through enhanced policy conversions.
+- Cross-selling in insurance is the practice of promoting products that are complementary to the policies that existing customers already own.
+- The goal of cross-selling is to create a win-win situation where customers can obtain comprehensive protection at a lower bundled cost, while insurers can boost revenue through enhanced policy conversions.
 - The aim of this project is to build a predictive ML pipeline (on the Health Insurance Cross-Sell dataset) to identify health insurance customers who are interested in purchasing additional vehicle insurance, in a bid to make cross-sell campaigns more efficient and targeted.
 
 
 ## Overview - Technical Aspect
 - Traditional machine learning (ML) model development is time-consuming, resource-intensive, and requires a high degree of technical expertise along with many lines of code. 
-- This model development process has been simplified and accelerated with the advent of automated machine learning (AutoML), allowing data teams to generate performant and scalable models quickly and efficiently.
-- An important thing to remember is that there are multiple components in production-ready ML systems beyond model development.
-- In this project, we explore how to set up, train, and serve an ML system using the powerful capabilities of H2O AutoML, MLflow, FastAPI, and Streamlit for insurance cross-sell prediction
+- This model development process has been accelerated with the advent of automated machine learning (AutoML), allowing teams to generate performant and scalable models efficiently.
+- An important thing to remember is that there are multiple components in a production-ready ML system beyond model development that requires plenty of work.
+- In this comprehensive guide, we explore how to set up, train, and serve an ML system using the powerful capabilities of H2O AutoML, MLflow, FastAPI, and Streamlit to build an insurance cross-sell prediction model.
 
 ___
 ## Objective
-- Build a ML pipeline (on Health Insurance data) to automatically classify the interest of health insurance customers in purchasing additional vehicle insurance coverage.
+- Make cross-selling more efficient and targeted by building a predictive ML pipeline to identify health insurance customers interested in purchasing additional vehicle insurance.
 
 ___
 ## Pipeline Components
