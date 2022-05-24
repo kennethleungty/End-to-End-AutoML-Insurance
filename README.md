@@ -31,13 +31,15 @@ ___
 
 ___
 ## Project Files and Folders
-- `/data` - Folder containing the raw data, processed data and output data (predictions JSON file)
-- `/demo` - Folder containing the gif and webm of Streamlit UI demo
-- `/submissions` - Folder containing the CSV files for Kaggle submission to retrieve model accuracy scores
+- `/data` - Folder containing raw data, processed data and output data (predictions JSON file)
+- `/demo` - Folder containing gif and webm of Streamlit UI demo
+- `/notebooks` - Folder containing Jupyter notebooks for EDA, XGBoost baseline, and H2O AutoML experiments
+    - `01_EDA_and_Data_PreProcessing.ipynb` - Notebook detailing the data acquisition, data cleaning and feature engineering steps
+    - `02_XGBoost_Baseline_Model.ipynb` - Notebook running the XGBoost baseline model for subsequent comparison
+    - `03_H2O_AutoML_with_MLflow.ipynb` - Notebook showing the full H2O AutoML training and MLflow tracking process, along with model inference to get predictions  
+
+- `/submissions` - Folder containing CSV files for Kaggle submission to retrieve model accuracy scores
 - `/utils` - Folder containing Python scripts with helper functions
-- `01_EDA_and_Data_PreProcessing.ipynb` - Notebook detailing the data acquisition, data cleaning and feature engineering steps
-- `02_XGBoost_Baseline_Model.ipynb` - Notebook running the XGBoost baseline model for subsequent comparison
-- `03_H2O_AutoML_with_MLflow.ipynb` - Notebook showing the full H2O AutoML training and MLflow tracking process, along with model inference to get predictions
 - `train.py` - Python script for the execution of H2O AutoML training with MLflow tracking. E.g. Run in CLI with `python train.py --target 'Response'`
 - `main.py` - Python script for selecting best H2O model and deploying (and serving) it as FastAPI endpoint. E.g. Run in CLI with `uvicorn main:app --host=0.0.0.0 --port=8000`
 - `ui.py` - Python script for the Streamlit web app, connected with FastAPI endpoint for model inference. E.g. Run in CLI with `streamlit run ui.py`
