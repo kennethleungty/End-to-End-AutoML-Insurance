@@ -31,18 +31,20 @@ ___
 
 ___
 ## Project Files and Folders
-- `/data` - Folder containing raw data, processed data and output data (predictions JSON file)
+- `/backend` - Folder to contain the files needed to setup the backend aspects of project (i.e. H2O ML model and FastAPI instance)
+    - `/data` - Raw data, processed data and output data (predictions JSON file)
+    - `/mlruns` - Artifacts from ML training experiments
+    - `/utils` - Folder containing Python scripts with helper functions
+    - `main.py` - Python script for selecting best H2O model and deploying (and serving) it as FastAPI endpoint. Run with this command: `uvicorn main:app --host 0.0.0.0 --port 8000`
+    - `train.py` - Python script for the execution of H2O AutoML training with MLflow tracking. Run with this command: `python train.py --target 'Response'`
+- `/frontend` - Folder containining the frontend user interface (UI) aspect of project (i.e. Streamlit)
+    - `app.py` - Python script for the Streamlit web app, connected with FastAPI endpoint for model inference. Run in CLI with `streamlit run ui.py`     
 - `/demo` - Folder containing gif and webm of Streamlit UI demo
 - `/notebooks` - Folder containing Jupyter notebooks for EDA, XGBoost baseline, and H2O AutoML experiments
     - `01_EDA_and_Data_PreProcessing.ipynb` - Notebook detailing the data acquisition, data cleaning and feature engineering steps
     - `02_XGBoost_Baseline_Model.ipynb` - Notebook running the XGBoost baseline model for subsequent comparison
     - `03_H2O_AutoML_with_MLflow.ipynb` - Notebook showing the full H2O AutoML training and MLflow tracking process, along with model inference to get predictions  
-
 - `/submissions` - Folder containing CSV files for Kaggle submission to retrieve model accuracy scores
-- `/utils` - Folder containing Python scripts with helper functions
-- `train.py` - Python script for the execution of H2O AutoML training with MLflow tracking. E.g. Run in CLI with `python train.py --target 'Response'`
-- `main.py` - Python script for selecting best H2O model and deploying (and serving) it as FastAPI endpoint. E.g. Run in CLI with `uvicorn main:app --host=0.0.0.0 --port=8000`
-- `ui.py` - Python script for the Streamlit web app, connected with FastAPI endpoint for model inference. E.g. Run in CLI with `streamlit run ui.py`
 
 ___
 ## References
@@ -54,3 +56,4 @@ ___
 - https://testdriven.io/blog/fastapi-streamlit/
 - https://rihab-feki.medium.com/deploying-machine-learning-models-with-streamlit-fastapi-and-docker-bb16bbf8eb91
 - https://davidefiocco.github.io/streamlit-fastapi-ml-serving/
+- https://rihab-feki.medium.com/deploying-machine-learning-models-with-streamlit-fastapi-and-docker-bb16bbf8eb91
