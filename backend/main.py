@@ -28,7 +28,7 @@ app = FastAPI()
 h2o.init()
 client = MlflowClient()
 
-# Load best model (based on logloss) amongst all runs in all experiments
+# Load best model (based on logloss) amongst all experiment runs
 all_exps = [exp.experiment_id for exp in client.list_experiments()]
 runs = mlflow.search_runs(experiment_ids=all_exps, run_view_type=ViewType.ALL)
 run_id, exp_id = runs.loc[runs['metrics.log_loss'].idxmin()]['run_id'], runs.loc[runs['metrics.log_loss'].idxmin()]['experiment_id']
@@ -67,9 +67,10 @@ async def predict(file: bytes = File(...)):
 async def main():
     content = """
     <body>
-    <h2> Welcome to the End to End AutoML Pipeline Project</h2>
-    <h3> The H2O model and FastAPI instances have been set up successfully </h3>
-    <h3> Proceed to initialize the Streamlit UI (frontend/app.py) to submit prediction requests </h3>
+    <h2> Welcome to the End to End AutoML Pipeline Project for Insurance Cross-Sell</h2>
+    <p> The H2O model and FastAPI instances have been set up successfully </p>
+    <p> You can view the FastAPI UI by heading to localhost:8000 </p>
+    <p> Proceed to initialize the Streamlit UI (frontend/app.py) to submit prediction requests </p>
     </body>
     """
     # content = """
