@@ -1,0 +1,34 @@
+# Run this Docker compose file using `docker-compose up`
+version: '3'
+
+services:
+  # Backend service (FastAPI and H2O Model loaded from MLflow)
+  backend:
+    build: 
+      context: ./backend
+      dockerfile: Dockerfile
+    image: e2e-automl-backend:latest
+    ports:
+      - 8000:8000
+    volumes:
+      - ./frontend:/app/frontend
+    networks:
+      - backend_net
+
+  # Frontend service (Streamlit UI)
+  frontend:
+    build: 
+      context: ./frontend
+      dockerfile: Dockerfile
+    image: e2e-automl-frontend:latest
+    ports:
+      - 8501:8501
+    volumes:
+      - ./backend:/app/backend
+    depends_on:
+      - backend
+    networks:
+      - backend_net
+
+networks:
+  backend_net:
