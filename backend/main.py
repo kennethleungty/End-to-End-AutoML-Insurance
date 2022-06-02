@@ -1,7 +1,7 @@
 # ===========================
 # Module: FastAPI setup
 # Author: Kenneth Leung
-# Last Modified: 30 May 2022
+# Last Modified: 02 Jun 2022
 # ===========================
 # Command to execute script locally: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 # Command to run Docker image: docker run -d -p 8000:8000 <fastapi-app-name>:latest
@@ -25,6 +25,7 @@ from utils.data_processing import match_col_types, separate_id_col
 app = FastAPI()
 
 # Initiate H2O instance and MLflow client
+# h2o.init(ip="localhost", port=54321)
 h2o.init()
 client = MlflowClient()
 
@@ -46,7 +47,7 @@ async def predict(file: bytes = File(...)):
     # Separate ID column (if any)
     id_name, X_id, X_h2o = separate_id_col(test_h2o)
 
-    # Match test set col types with train set
+    # Match test set column types with train set
     X_h2o = match_col_types(X_h2o)
 
     # Generate predictions with best model (output is H2O frame)
@@ -60,6 +61,7 @@ async def predict(file: bytes = File(...)):
     else:
         preds_final = preds.as_data_frame()['predict'].tolist()
 
+    # Convert predictions into JSON format
     json_compatible_item_data = jsonable_encoder(preds_final)
     return JSONResponse(content=json_compatible_item_data)
 

@@ -15,12 +15,12 @@ import json
 st.title('End-to-End AutoML Project: Insurance Cross-Sell')
 
 # Set FastAPI endpoint
-endpoint = 'http://localhost:8000/predict'
-st.text('''Author: Kenneth Leung''') # description and instructions
+# endpoint = 'http://localhost:8000/predict'
+endpoint = 'http://host.docker.internal:8000/predict' # Specify this path for Dockerization to work
 
-test_csv = st.file_uploader('', type=['csv','xlsx'], accept_multiple_files=False)
+test_csv = st.file_uploader('', type=['csv'], accept_multiple_files=False)
 
-# Upon upload of file
+# Upon upload of file (to test using test.csv from data/processed folder)
 if test_csv:
     test_df = pd.read_csv(test_csv)
     st.subheader('Sample of Uploaded Dataset')
@@ -39,8 +39,6 @@ if test_csv:
             st.write("Please upload a valid test dataset!")  # handle case with no image
         else:
             with st.spinner('Prediction in Progress. Please Wait...'):
-                # import time
-                # time.sleep(3)
                 output = requests.post(endpoint, 
                                        files=files,
                                        timeout=8000)

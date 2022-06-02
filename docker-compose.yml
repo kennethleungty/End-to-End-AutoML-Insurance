@@ -1,34 +1,31 @@
-# Run this Docker compose file using `docker-compose up`
-version: '3'
+# Run this Docker compose file using `docker-compose up -d --build`
+# No need specify version 2 or 3 in latest Compose specification
 
 services:
-  # Backend service (FastAPI and H2O Model loaded from MLflow)
+  # Backend service (FastAPI and H2O Model loaded from MLflow Tracking)
   backend:
-    build: 
-      context: ./backend
-      dockerfile: Dockerfile
-    image: e2e-automl-backend:latest
+    build: backend
+    image: e2e-automl-backend:latest     
     ports:
       - 8000:8000
+      - 54321:54321
     volumes:
-      - ./frontend:/app/frontend
+      - ./backend:/app/backend
     networks:
-      - backend_net
+      - project_network
 
   # Frontend service (Streamlit UI)
   frontend:
-    build: 
-      context: ./frontend
-      dockerfile: Dockerfile
+    build: frontend
     image: e2e-automl-frontend:latest
     ports:
       - 8501:8501
     volumes:
-      - ./backend:/app/backend
-    depends_on:
-      - backend
+      - ./frontend:/app/frontend
+    depends_on: 
+    - backend
     networks:
-      - backend_net
+      - project_network
 
 networks:
-  backend_net:
+  project_network:
