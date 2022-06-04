@@ -1,5 +1,5 @@
 # ===========================
-# Module: FastAPI setup
+# Module: Backend setup (H2O, MLflowy)
 # Author: Kenneth Leung
 # Last Modified: 02 Jun 2022
 # ===========================
@@ -25,7 +25,6 @@ from utils.data_processing import match_col_types, separate_id_col
 app = FastAPI()
 
 # Initiate H2O instance and MLflow client
-# h2o.init(ip="localhost", port=54321)
 h2o.init()
 client = MlflowClient()
 
