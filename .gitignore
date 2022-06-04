@@ -1,6 +1,9 @@
 # Virtual environment
 env_automl/
 
+# Powerpoint
+*.pptx
+
 # Data folders
 data/processed/
 
