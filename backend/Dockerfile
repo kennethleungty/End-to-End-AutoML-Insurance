@@ -5,7 +5,7 @@ FROM python:3.9
 WORKDIR /app
 
 # Install Java (JRE) in container since H2O uses Java
-RUN apt-get update && apt-get install -y openjdk-11-jre
+RUN apt-get update && apt-get install -y default-jre
 
 # Copy list of backend requirements
 COPY requirements-backend.txt requirements.txt
