@@ -7,8 +7,8 @@ services:
     build: backend
     image: e2e-automl-backend:latest     
     ports:
-      - 8000:8000
-      - 54321:54321
+      - "8000:8000"
+      - "54321:54321"
     volumes:
       - ./backend:/app/backend
     networks:
@@ -19,7 +19,7 @@ services:
     build: frontend
     image: e2e-automl-frontend:latest
     ports:
-      - 8501:8501
+      - "8501:8501"
     volumes:
       - ./frontend:/app/frontend
     depends_on: 
