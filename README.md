@@ -1,6 +1,8 @@
 # End-to-End AutoML with H2O, MLflow, FastAPI, and Streamlit for Insurance Cross-Sell
 
-Link to writeup: https://towardsdatascience.com/end-to-end-automl-train-and-serve-with-h2o-mlflow-fastapi-and-streamlit-5d36eedfe606
+Links to articles on this project:
+- [End-to-End AutoML Pipeline with H2O AutoML, MLflow, FastAPI, and Streamlit](https://towardsdatascience.com/end-to-end-automl-train-and-serve-with-h2o-mlflow-fastapi-and-streamlit-5d36eedfe606)
+- [How to Dockerize Machine Learning Applications Built with H2O, MLflow, FastAPI, and Streamlit](https://towardsdatascience.com/how-to-dockerize-machine-learning-applications-built-with-h2o-mlflow-fastapi-and-streamlit-a56221035eb5)
 
 ## Overview - Business Aspect
 - Cross-selling in insurance is the practice of promoting products that are complementary to the policies that existing customers already own.
@@ -36,9 +38,11 @@ ___
     - `/mlruns` - Artifacts from ML training experiments
     - `/utils` - Folder containing Python scripts with helper functions
     - `main.py` - Python script for selecting best H2O model and deploying (and serving) it as FastAPI endpoint. Run with this command: `uvicorn main:app --host 0.0.0.0 --port 8000`
+    - `Dockerfile` - Dockerfile to build backend service  
     - `train.py` - Python script for the execution of H2O AutoML training with MLflow tracking. Run with this command: `python train.py --target 'Response'`
 - `/frontend` - Folder containining the frontend user interface (UI) aspect of project (i.e. Streamlit)
-    - `app.py` - Python script for the Streamlit web app, connected with FastAPI endpoint for model inference. Run in CLI with `streamlit run ui.py`     
+    - `app.py` - Python script for the Streamlit web app, connected with FastAPI endpoint for model inference. Run in CLI with `streamlit run ui.py`
+    - `Dockerfile` - Dockerfile to build frontend service     
 - `/demo` - Folder containing gif and webm of Streamlit UI demo
 - `/notebooks` - Folder containing Jupyter notebooks for EDA, XGBoost baseline, and H2O AutoML experiments
     - `01_EDA_and_Data_PreProcessing.ipynb` - Notebook detailing the data acquisition, data cleaning and feature engineering steps
